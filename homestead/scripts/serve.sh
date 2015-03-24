@@ -18,6 +18,18 @@ case $TYPE in
   ROOT="/home/vagrant/sites/$NAME_EXT/web"
   echo "$NAME is a Drupal project."
   ;;
+  'HTML')
+  ROOT="/home/vagrant/sites/$NAME_EXT"
+  echo "$NAME is a HTML project."
+  ;;
+  'silx')
+  ROOT="/home/vagrant/sites/$NAME_EXT/web"
+  echo "$NAME is a silex project."
+  ;;
+  'socialgoo')
+  ROOT="/home/vagrant/sites/$NAME_EXT/public_html"
+  echo "$NAME is a socialgoo project."
+  ;;
 esac
 
 block="server {
@@ -32,6 +44,9 @@ block="server {
     index index.html index.htm index.php;
 
     charset utf-8;
+
+    rewrite ^/(wp-.*.php)$ /wp/$1 last;
+    rewrite ^/(wp-(content|admin|includes).*) /wp/$1 last;
 
     location / {
         try_files \$uri \$uri/ /index.php?\$query_string;

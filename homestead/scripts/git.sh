@@ -16,6 +16,9 @@ case $TYPE in
   'drupal')
   GIT_REPO="git@github.com:ryan-was/drupal-base.git"
   ;;
+  'silex')
+  GIT_REPO="git@github.com:silexphp/Silex-Skeleton.git"
+  ;;
 esac
 
 DIR="/home/vagrant/sites/$NAME_EXT"

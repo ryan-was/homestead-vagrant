@@ -27,6 +27,24 @@ DB_USER=homestead
 DB_PASSWORD=secret
 DB_HOST=localhost"
   ;;
+  'HTML')
+ENV="DB_NAME=$NAME
+DB_USER=homestead
+DB_PASSWORD=secret
+DB_HOST=localhost"
+  ;;
+  'silex')
+ENV="DB_NAME=$NAME
+DB_USER=homestead
+DB_PASSWORD=secret
+DB_HOST=localhost"
+  ;;
+  'socialgoo')
+ENV="DB_NAME=$NAME
+DB_USER=homestead
+DB_PASSWORD=secret
+DB_HOST=localhost"
+  ;;
 esac
 
 

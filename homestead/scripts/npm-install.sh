@@ -15,6 +15,12 @@ case $TYPE in
   'drupal')
   DIR="/home/vagrant/sites/$NAME_EXT"
   ;;
+  'HTML')
+  DIR="/home/vagrant/sites/$NAME_EXT"
+  ;;
+  'silex')
+  DIR="/home/vagrant/sites/$NAME_EXT"
+  ;;
 esac
 echo $DIR
 if [ -f $DIR/package.json ]; then
